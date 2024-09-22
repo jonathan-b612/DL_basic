@@ -122,17 +122,3 @@ transform = transforms.Compose([
     transforms.ToTensor(),  # 将 PIL 图像或 NumPy ndarray 转换为 torch.Tensor
 ])
 
-def data_tf2(x):
-    x = np.array(x, dtype='float32') / 255
-    x = (x - 0.5) / 0.5 # 数据预处理，标准化
-    x = torch.from_numpy(x)
-    print(x.shape)
-    x = x.unsqueeze(0)
-    return x
-
-train_dataset2 = mnist.MNIST('./data', train=True, transform=data_tf2,download=True) # 重新载入数据集，申明定义的数据变换
-test_dataset2 = mnist.MNIST('./data', train=False,transform=data_tf2,download=True)
-train_data2 = DataLoader(train_dataset2, batch_size=64, shuffle=True)
-test_data2 = DataLoader(test_dataset2, batch_size=128, shuffle=False)
-for i,j in train_data2:
-    print(i.shape,j.shape)
