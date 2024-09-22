@@ -118,7 +118,4 @@ from torchvision import transforms
 # print(pred_label_wrong_dim)  # 输出可能是类似于 tensor([4, 1, 3]) 的东西，但这取决于概率的具体值
 
 
-transform = transforms.Compose([
-    transforms.ToTensor(),  # 将 PIL 图像或 NumPy ndarray 转换为 torch.Tensor
-])
 
