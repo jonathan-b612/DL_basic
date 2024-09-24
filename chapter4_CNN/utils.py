@@ -11,14 +11,14 @@ def get_acc(output, label):
 
 
 def train(net, train_dataloader, test_dataloader, criterion, optimizer, epoch):
-    if torch.cuda.is_available():
-        net = net.cuda()
     prev_time = datetime.now()
     for epoch in range(epoch):
         train_loss = 0
         train_acc = 0
-        net = net.train()
+
         for im, label in train_dataloader:
+            im = im.cuda()
+            label = label.cuda()
             output = net(im)
             loss = criterion(output, label)
             optimizer.zero_grad()
@@ -36,6 +36,8 @@ def train(net, train_dataloader, test_dataloader, criterion, optimizer, epoch):
             test_acc = 0
             net = net.eval()
             for im, label in test_dataloader:
+                im = im.cuda()
+                label = label.cuda()
                 output = net(im)
                 loss = criterion(output, label)
                 test_loss += loss.item()
