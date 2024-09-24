@@ -67,4 +67,4 @@ optimizer = torch.optim.SGD(net.parameters(), lr=1e-1)
 criterion = nn.CrossEntropyLoss()
 
 from utils import train
-train(net,train_data,test_data,criterion,optimizer,5)
+train(net,train_data,test_data,criterion,optimizer,10)
