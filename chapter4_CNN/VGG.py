@@ -4,7 +4,7 @@ from torch import nn
 from torch.utils.data import DataLoader
 from torchvision.datasets import CIFAR10
 
-
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 def vgg_block(num_convs, in_channels, out_channels):
     net = [nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1), nn.ReLU()]  # 定义第一层
 
@@ -27,8 +27,8 @@ def vgg_stack(num_convs, channels):
         #*net
     return nn.Sequential(*net)
 
-vgg_net = vgg_stack((1, 1, 2, 2, 2), ((3, 64), (64, 128), (128, 256), (256, 512), (512, 512)))
-print(vgg_net)
+vgg_net = vgg_stack((1, 1, 2, 2, 2), ((3, 64), (64, 128), (128, 256), (256, 512), (512, 512))).to(device)
+
 
 class vgg(nn.Module):
     def __init__(self):
@@ -53,7 +53,7 @@ def data_tf(x):
     x = np.array(x, dtype='float32') / 255
     x = (x - 0.5) / 0.5  # 标准化，这个技巧之后会讲到
     x = x.transpose((2, 0, 1))  # 将 channel 放到第一维，只是 pytorch 要求的输入方式
-    x = torch.from_numpy(x)
+    x = torch.from_numpy(x).to(device)
     return x
 
 
@@ -62,9 +62,10 @@ train_data = DataLoader(train_set, batch_size=64, shuffle=True)
 test_set = CIFAR10('../data', train=False, transform=data_tf,download=True)
 test_data = DataLoader(test_set, batch_size=128, shuffle=False)
 
-net = vgg()
+net = vgg().to(device)
+
 optimizer = torch.optim.SGD(net.parameters(), lr=1e-1)
-criterion = nn.CrossEntropyLoss()
+criterion = nn.CrossEntropyLoss().to(device)
 
 from utils import train
 train(net,train_data,test_data,criterion,optimizer,10)

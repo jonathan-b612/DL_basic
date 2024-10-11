@@ -44,12 +44,12 @@ def train(net, train_dataloader, test_dataloader, criterion, optimizer, epoch):
                 test_acc += ( torch.sum(torch.argmax(output, dim=1) == label).item() /output.shape[0] )
             epoch_str = (
                     "Epoch %d. Train Loss: %f, Train Acc: %f, Valid Loss: %f, Valid Acc: %f, "
-                    % (epoch, train_loss / len(train_dataloader),
+                    % (epoch+1, train_loss / len(train_dataloader),
                        train_acc / len(train_dataloader), test_loss / len(test_dataloader),
                        test_acc / len(test_dataloader)))
         else:
             epoch_str = ("Epoch %d. Train Loss: %f, Train Acc: %f, " %
-                         (epoch, train_loss / len(train_dataloader),
+                         (epoch+1, train_loss / len(train_dataloader),
                           train_acc / len(train_dataloader)))
         prev_time = cur_time
         print(epoch_str + time_str)
