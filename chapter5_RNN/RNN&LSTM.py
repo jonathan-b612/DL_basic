@@ -24,6 +24,13 @@ out = []
 """ nn.rnn"""
 rnn_seq = nn.RNN(100, 200)
 # 访问其中的参数 x.shape(6,5,100)
-out_1,h_t_1 = rnn_seq(x) # 使用默认的全 0 隐藏状态
-print(out_1.shape) #网络的最后状态
-print(h_t_1.shape) #
+out_1,h_t_1 = rnn_seq(x)  # 使用默认的全 0 隐藏状态
+# out_1[-1] equal h_t_1
+# print(out_1.shape)  # 网络的最后状态(times,batch,features)
+# print(h_t_1.shape)  # 隐藏层最终状态(times(last),batch,features)
+
+lstm_seq = nn.LSTM(50, 100, num_layers=2)
+lstm_input = torch.randn(10, 3, 50)  # 序列 10，batch 是 3，输入维度 50
+out_2,h_t_2 = lstm_seq(lstm_input)  # h_t_2（h,c）,h是未和输出门相乘的输出(不算最终输出) ， c是记忆单元
+print(out_2.shape)
+print(h_t_2[0].shape,h_t_2[1].shape)

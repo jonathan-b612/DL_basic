@@ -117,4 +117,60 @@ from torchvision import transforms
 # # 打印结果
 # print(pred_label_wrong_dim)  # 输出可能是类似于 tensor([4, 1, 3]) 的东西，但这取决于概率的具体值
 
+""" param_cpu = param_cpu[param_cpu != 0].view(-1) """
+# param_cpu = param.detach().view(-1).cpu()
+# param_cpu = param_cpu[param_cpu != 0].view(-1)
 
+# param = [1,0,2,3,0]
+# param = param[param != 0]
+# print(param)
+#
+# param1 = torch.tensor([1,0,2,3,0])
+# param1 = param1[param1 != 0]
+# print(param1)
+
+"""ax.hist"""
+# import matplotlib.pyplot as plt
+# import numpy as np
+#
+# # 生成一些随机数据
+# data = np.random.randn(1000)
+# # 创建一个图形和一个子图
+# fig, ax = plt.subplots()
+# # 绘制直方图，设置density=True以显示概率密度
+# ax.hist(data, bins=30, density=True, alpha=0.75, color='blue', edgecolor='black')
+# # 设置标题和标签
+# ax.set_title('Histogram with Density')
+# ax.set_xlabel('Value')
+# ax.set_ylabel('Density')
+# # 显示图形
+# plt.show()
+
+""" neural network layer attribution """
+import torch
+import torch.nn as nn
+
+# 定义一个简单的全连接层
+layer = nn.Linear(in_features=10, out_features=5)
+
+# 访问权重和偏置
+weights = layer.weight
+biases = layer.bias
+
+# 打印权重和偏置
+print("Weights:", weights)
+print("Biases:", biases)
+
+# 计算输出并访问输出大小
+input_data = torch.randn(1, 10)  # 一条输入数据
+output = layer(input_data)
+print("Output Size:", output.shape)
+
+# 假设是 BatchNorm 层，访问运行均值和方差
+batch_norm_layer = nn.BatchNorm1d(num_features=5)
+print("Running Mean:", batch_norm_layer.running_mean)
+print("Running Variance:", batch_norm_layer.running_var)
+
+# 访问 Dropout 层的丢弃率
+dropout_layer = nn.Dropout(p=0.5)
+print("Dropout Rate:", dropout_layer.p)
