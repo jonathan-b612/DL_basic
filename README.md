@@ -91,13 +91,13 @@ fundamental work about DL&DL_compression
   
 #### [第2章 CNN基础(未写)](https://datawhalechina.github.io/awesome-compression/#/ch02/ch02)
 
-#### [第3章 模型剪枝(pruning)](https://datawhalechina.github.io/awesome-compression/#/ch03/ch03)
+#### [第3章 模型剪枝(/pruning)](https://datawhalechina.github.io/awesome-compression/#/ch03/ch03)
 - 剪枝粒度实践(1.pruning_granularity)
 - 剪枝标准实践(2.pruning_criteria)
 - 剪枝时机实践(3.pruning_time)
 - torch中的剪枝算法实践(4.torch_prune)
 
-#### [第4章 模型量化(quantization)](https://datawhalechina.github.io/awesome-compression/#/ch04/ch04)
+#### [第4章 模型量化(/quantization)](https://datawhalechina.github.io/awesome-compression/#/ch04/ch04)
 - k-means量化实践(1.kmeans_quantizations)
 - 线性量化实践(2.linear_quantization)
 - KL量化实践(3.KL_quantization)
