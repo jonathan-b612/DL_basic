@@ -2,17 +2,17 @@ fundamental work about DL&DL_compression
 ### [深度学习之pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch/tree/master)
 ##### Chapter 3: 神经网络
 
-- [线性模型与梯度下降](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/linear-regression-gradient-descend.ipynb)
+- [线性模型与梯度下降(未写)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/linear-regression-gradient-descend.ipynb)
 
-- [Logistic 回归与优化器](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/logistic-regression/logistic-regression.ipynb)
+- [Logistic 回归与优化器(logistic_regression.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/logistic-regression/logistic-regression.ipynb)
 
-- [多层神经网络，Sequential 和 Module](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/nn-sequential-module.ipynb)
+- [多层神经网络，Sequential 和 Module(nn_sequential_moudle_*.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/nn-sequential-module.ipynb)
 
-- [深层神经网络](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/deep-nn.ipynb)
+- [深层神经网络(nn_sequential_moudle_*.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/deep-nn.ipynb)
 
-- [参数初始化方法](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/param_initialize.ipynb)
+- [参数初始化方法(param_initialize.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/param_initialize.ipynb)
 
-- 优化算法
+- 优化算法(/optimizer)
   
   - [SGD](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/optimizer/sgd.ipynb)
   - [动量法](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/optimizer/momentum.ipynb)
@@ -23,20 +23,20 @@ fundamental work about DL&DL_compression
 
 ##### Chapter 4: 卷积神经网络
 
-* [PyTorch 中的卷积模块](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/basic_conv.ipynb)
-* [批标准化，batch normalization](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/batch-normalization.ipynb)
-* [使用重复元素的深度网络，VGG](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/vgg.ipynb)
-* [更加丰富化结构的网络，GoogLeNet](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/googlenet.ipynb)
-* [深度残差网络，ResNet](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/resnet.ipynb)
-* [稠密连接的卷积网络，DenseNet](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/densenet.ipynb)
+* [PyTorch 中的卷积模块(Basic_conv.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/basic_conv.ipynb)
+* [批标准化，batch normalization(Batch_nomalizetion.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/batch-normalization.ipynb)
+* [使用重复元素的深度网络，VGG(VGG.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/vgg.ipynb)
+* [更加丰富化结构的网络，GoogLeNet(GoogleNet.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/googlenet.ipynb)
+* [深度残差网络，ResNet(Resnet.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/resnet.ipynb)
+* [稠密连接的卷积网络，DenseNet(Densenet.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/densenet.ipynb)
 * 更好的训练卷积网络
-  * [数据增强](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/data-augumentation.ipynb)
-  * [正则化](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/regularization.ipynb)
-  * [学习率衰减](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/lr-decay.ipynb)
+  * [数据增强(data-augumentation.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/data-augumentation.ipynb)
+  * [正则化(未写)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/regularization.ipynb)
+  * [学习率衰减(Lr_decay.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter4_CNN/lr-decay.ipynb)
 
 ##### Chapter 5: 循环神经网络
 
-* [循环神经网络模块：LSTM 和 GRU](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter5_RNN/pytorch-rnn.ipynb)
+* [循环神经网络模块：LSTM 和 GRU(RNN&LSTM.py)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter5_RNN/pytorch-rnn.ipynb)
 * [使用 RNN 进行图像分类](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter5_RNN/rnn-for-image.ipynb)
 * [使用 RNN 进行时间序列分析](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter5_RNN/time-series/lstm-time-series.ipynb)
 * 自然语言处理的应用：
