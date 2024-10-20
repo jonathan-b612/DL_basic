@@ -1,4 +1,4 @@
-fundamental work about DL&DL_compression
+fundamental work about  Deep_learning & Model_Compression
 ### [深度学习之pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch/tree/master)
 ##### Chapter 3: 神经网络
 
