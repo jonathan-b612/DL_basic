@@ -1,5 +1,8 @@
 fundamental work about  Deep_learning & Model_Compression
 ### [深度学习之pytorch](https://github.com/L1aoXingyu/code-of-learn-deep-learning-with-pytorch/tree/master)
+
+#### part1: 深度学习基础
+
 ##### Chapter 3: 神经网络
 
 - [线性模型与梯度下降(未写)](https://github.com/SherlockLiao/code-of-learn-deep-learning-with-pytorch/blob/master/chapter3_NN/linear-regression-gradient-descend.ipynb)
