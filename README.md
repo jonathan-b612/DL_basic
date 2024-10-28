@@ -92,16 +92,16 @@ fundamental work about  Deep_learning & Model_Compression
 #### [第2章 CNN基础(未写)](https://datawhalechina.github.io/awesome-compression/#/ch02/ch02)
 
 #### [第3章 模型剪枝(/pruning)](https://datawhalechina.github.io/awesome-compression/#/ch03/ch03)
-- 剪枝粒度实践(1.pruning_granularity)
-- 剪枝标准实践(2.pruning_criteria)
-- 剪枝时机实践(3.pruning_time)
-- torch中的剪枝算法实践(4.torch_prune)
+- 剪枝粒度实践(1.pruning_granularity.py)
+- 剪枝标准实践(2.pruning_criteria.py)
+- 剪枝时机实践(3.pruning_time.py)
+- torch中的剪枝算法实践(4.torch_prune.py)
 
 #### [第4章 模型量化(/quantization)](https://datawhalechina.github.io/awesome-compression/#/ch04/ch04)
-- k-means量化实践(1.kmeans_quantizations)
-- 线性量化实践(2.linear_quantization)
-- KL量化实践(3.KL_quantization)
-- 量化感知训练实践(4.pytorch_QAT)
+- k-means量化实践(1.kmeans_quantizations.py)
+- 线性量化实践(2.linear_quantization.py)
+- KL量化实践(3.KL_quantization.py)
+- 量化感知训练实践(4.pytorch_QAT.py)
 
   
 #### [第5章 神经网络架构搜索](https://datawhalechina.github.io/awesome-compression/#/ch05/ch05)
